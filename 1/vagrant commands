@@ -1,0 +1,11 @@
+https://blog.stephane-robert.info/docs/infra-as-code/provisionnement/vagrant/introduction/
+
+vagrant init -> cree un file vagrant de base
+
+vagrant up -> build la vm et la lance
+
+vagrant suspend -> suspend la vm
+
+vagrant halt -> shutdown la vm
+
+
