@@ -1,0 +1,14 @@
+hostname bpoumeauS
+192.168.56.110
+1 CPU
+512 mb ram
+ssh no password
+
+hostname bpoumeauSW
+192.168.56.111
+1 CPU
+512 mb ram
+ssh no password
+
+
+
