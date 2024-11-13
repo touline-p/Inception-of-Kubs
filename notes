@@ -127,3 +127,13 @@ c'est cette issue
 le gars conseil de fix en mettant le flag --node-external-ip sur le master node
 
 je passe le script de inline a script pour plus de lisibilite
+
+pour l'install de k3s on a un script en ligne qui permet l'install avec des var d'environement
+on mets le partage des files pour le token dans /token dans le vagrantfile et on s'assure que le serveur
+copie le token pour que le worker le voi
+
+ne pas oublier de laisser suffisament de place et de cpu pour quee cce soit plus rapide
+
+on se connect avec vagrant ssh et on fait kubectl get nodes -o wide -> C BON
+
+Fin deuxieme journee
