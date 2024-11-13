@@ -107,3 +107,23 @@ je vais maintenant dupliquer les deux machine
 
 pour gerer le multimachine dans le meme vagrantfile on utilise le mot cle define
 https://developer.hashicorp.com/vagrant/docs/multi-machine
+
+pour k3s il y a le quick start
+https://docs.k3s.io/quick-start
+
+je test de mettre seulement ce qui est demande
+
+bien mettre le -y pour faire l'install de curl
+
+en parrallele j'installe kubectl sur ma machine hote
+
+https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/
+
+le k3s se lance sur le master mais pas sur l'agent comme si il ne reussisait pas a se connecter
+
+https://github.com/k3s-io/k3s/issues/6879
+
+c'est cette issue
+le gars conseil de fix en mettant le flag --node-external-ip sur le master node
+
+je passe le script de inline a script pour plus de lisibilite

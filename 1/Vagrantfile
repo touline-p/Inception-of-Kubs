@@ -10,8 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "bpoumeauS" do |server| 
     # Every Vagrant development environment requires a box. You can search for
     # boxes at https://vagrantcloud.com/search.
-    server.vm.box = "generic/debian12"
-    server.vm.box_version = "4.3.12"
+    server.vm.box = "debian/bookworm64"
     server.vm.box_check_update = false
   
     # server du hostname et du network
@@ -24,7 +23,6 @@ Vagrant.configure("2") do |config|
     server.vm.provider "virtualbox" do |vb|
       # Display the VirtualBox GUI when booting the machine
       # vb.gui = true
-      vb.name = "worker"
       # Customize the amount of memory on the VM:
       vb.cpus = "1"
       vb.memory = "512"
@@ -32,27 +30,19 @@ Vagrant.configure("2") do |config|
     # Enable provisioning with a shell script. Additional provisioners such as
     # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
     # documentation for more information about their specific syntax and use.
-    server.vm.provision "shell", inline: <<-SHELL
-      apt-get update
-      apt-get install -y 
-    SHELL
+    server.vm.provision "shell", path: "server.sh"
   end
 
   config.vm.define "bpoumeauSW" do |worker| 
-    worker.vm.box = "generic/debian12"
-    worker.vm.box_version = "4.3.12"
+    worker.vm.box = "debian/bookworm64"
     worker.vm.box_check_update = false
     worker.vm.hostname = "bpoumeauSW"
     worker.vm.network "private_network", ip: "192.168.56.111"
   
     worker.vm.provider "virtualbox" do |vb|
-      vb.name = "watcher"
       vb.cpus = "1"
       vb.memory = "512"
     end
-    worker.vm.provision "shell", inline: <<-SHELL
-      apt-get update
-      apt-get install -y 
-    SHELL
+    worker.vm.provision "shell", path: "worker.sh"
   end
 end
