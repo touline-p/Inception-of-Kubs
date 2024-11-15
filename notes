@@ -137,3 +137,44 @@ ne pas oublier de laisser suffisament de place et de cpu pour quee cce soit plus
 on se connect avec vagrant ssh et on fait kubectl get nodes -o wide -> C BON
 
 Fin deuxieme journee
+
+Partie 2
+je vais essayer de mettre plus de memoire pour qu'une seule machine virtuelle
+
+je commence par suivre le tuto du monsieur que je ne comprends pas
+
+Fin troisieme journee
+
+aujourd'hui je vais aller regarder une vid de techworld with nana (in one hours) -> crash courle
+
+iles feature : 
+- high availability
+- scalability
+- disaster recovery
+
+each node have a kubelet
+node make runs application
+
+master
+API server entry to the cluster UI API and CLI
+Controller manager
+scheduler -> where schedule zhat
+
+worker node n'ont pas beaucoup de ressource. les worker en ont bcp
+
+node 
+pod abstraction overa vontainer
+
+service
+ingress
+config
+
+
+config map is a configuration 
+data storage:  ->  volume 
+
+configuration go full 
+
+Kubctl
+
+c
