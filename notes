@@ -178,3 +178,12 @@ configuration go full
 Kubctl
 
 c
+
+j'ai une config qui fonctionne pour un site
+quand je liste mes podes avec kubectl elle marche et je peut le curl avec http://10.42.0.6:8080
+
+de plus je peux me connecter a ma machine avec mon hote en ssh a la bonne address qui est le 192.168.56.110.
+
+mon seul probleme est que lorsque je curl l'adresse j'ai une 404
+
+le truc utilise l'hostname pour rediriger donc on va rajouter les hostname
