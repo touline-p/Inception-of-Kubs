@@ -1,0 +1,14 @@
+project: default
+source:
+  repoURL: https://github.com/touline-p/Inception-of-Kubs.git
+  path: ./2/shared/apps/
+  targetRevision: HEAD
+destination:
+  server: https://kubernetes.default.svc
+  namespace: dev
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=true

@@ -187,3 +187,46 @@ de plus je peux me connecter a ma machine avec mon hote en ssh a la bonne addres
 mon seul probleme est que lorsque je curl l'adresse j'ai une 404
 
 le truc utilise l'hostname pour rediriger donc on va rajouter les hostname
+
+part 3
+
+pour commencer je vais installer K3d
+
+wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+
+k3d -> docker
+k3s -> virtualisation
+
+instalation de docker
+https://docs.docker.com/engine/install/debian/
+
+argo cd
+
+quick start https://argo-cd.readthedocs.io/en/stable/
+
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+install kubectl
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+add du user dans le groupe docker
+https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+install de argocd
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
+je vais utiliser le flag insecure dans les commande pour ne pas avoir a setup un certificat ssl
+
+pour ouvrir le port je ne reussi pas avec la commande de port forwarding de base je mets en loadbalancer
+et j'ouvre le cluster k3d avec un yaml qui fait la redirection lui meme
+
+k3d cluster create argo -c k3d.yaml
+
+a part ca il faut juste suivre le tuto et attendre sa mere longtemps pour que argocd se lance
+
+
+une fois que c'est fait on peut se connecter a argo cd et faire le manifest par la GUI
+
