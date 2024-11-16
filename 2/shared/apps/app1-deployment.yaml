@@ -39,19 +39,3 @@ spec:
       targetPort: 8080
   type: ClusterIP
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: hello-kub1-ingress
-spec:
-  rules:
-    - host: 'app1.com'
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: hello-kub1-service
-                port:
-                  number: 80
