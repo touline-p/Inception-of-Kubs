@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app1-config
+  namespace: default
+data:
+  message: "App 1 motherfucker"

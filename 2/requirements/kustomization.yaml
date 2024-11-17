@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+# app 1
+- app_01/deployment.yaml
+- app_01/service.yaml
+- app_01/ingress.yaml
+- app_01/configmap.yaml
+# app 2
+- app_02/deployment.yaml
+- app_02/service.yaml
+- app_02/ingress.yaml
+- app_02/configmap.yaml
+# app 3
+- app_03/deployment.yaml
+- app_03/service.yaml
+- app_03/ingress.yaml
+- app_03/configmap.yaml
