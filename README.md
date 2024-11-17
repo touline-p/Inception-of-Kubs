@@ -59,7 +59,6 @@ cd 3/
 .
 ├── 1/                      # Part 1: K3s cluster setup
 │   ├── Vagrantfile        # VM configuration
-│   ├── demandes           # New directory
 │   ├── server.sh          # Server node setup script
 │   ├── token              # Directory containing token for authentication
 │   └── worker.sh          # Worker node setup script
