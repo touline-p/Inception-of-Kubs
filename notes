@@ -230,3 +230,24 @@ a part ca il faut juste suivre le tuto et attendre sa mere longtemps pour que ar
 
 une fois que c'est fait on peut se connecter a argo cd et faire le manifest par la GUI
 
+
+bonus 
+
+git lab
+
+installation de helm le package manager de kubernetes
+helm : https://helm.sh/docs/intro/install/
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+
+https://docs.gitlab.com/charts/installation/tools.html
+
+Gitaly Redis and Postegresql sont inclus pour du trial mais il est conseille de ne pas 
+
+networking and dns 
+
+fignolage partie 3
+
+k3d est une maniere de gere des cluster 
+le simple fait de creer un cluster permet de rentrer dans un context. 
+des lors toute les commande de kubectl le seront dans le contexte du cluster
+

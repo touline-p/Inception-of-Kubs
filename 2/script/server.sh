@@ -10,11 +10,6 @@ export INSTALL_K3S_EXEC="--flannel-iface=eth1"
 # install K3s
 curl -sfL https://get.k3s.io | sh -
 
-# le token est genere dans un file pour qu'il soit reutilise par le worker
-
-# create a backup of our K3s manifests in case the mounted directory becomes unavailable
-cp -r requirements /protected
-
 # wait for K3s to be ready
 until kubectl get nodes | grep -q " Ready"; do
     echo "Waiting for node to be ready..."
@@ -22,5 +17,5 @@ until kubectl get nodes | grep -q " Ready"; do
 done
 
 # apply / launch all the apps from requirements
-kubectl apply -k requirements/
+kubectl apply -k /config
 

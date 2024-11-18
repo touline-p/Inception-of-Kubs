@@ -1,3 +1,4 @@
+set -e
 apt-get update && apt-get install curl -y
 
 # K3s Configuration
@@ -8,11 +9,6 @@ export INSTALL_K3S_EXEC="--flannel-iface=eth1"
 # install K3s server
 curl -sfL https://get.k3s.io | sh -
 
-# wait for K3s to generate the token
-until [ -f /var/lib/rancher/k3s/server/node-token ]; do
-    echo "Waiting for node token to be generated..."
-    sleep 2
-done
 
 # copy token for worker nodes
 cp /var/lib/rancher/k3s/server/node-token /token/token
