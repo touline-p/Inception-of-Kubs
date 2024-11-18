@@ -1,3 +1,7 @@
+kube command
+kubectl config get-contexts
+kubectl config use-context cluster-name
+vagrant commands
 https://blog.stephane-robert.info/docs/infra-as-code/provisionnement/vagrant/introduction/
 
 vagrant init -> cree un file vagrant de base
